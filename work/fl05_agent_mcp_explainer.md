@@ -34,9 +34,9 @@ No MCP server configuration is currently committed in this repository, so I have
 
 1. **Repository discovery:** ask the client to list the repository root and identify `work/fl04_automation_workflow_v2.md`.
 2. **Source retrieval:** ask the client to read the `## Five real runs` section from that file and return the headings it finds.
-3. **Change inspection:** ask the client for the latest commit touching `work/fl04_automation_workflow_v2.md` and report its message and date.
+3. **Deployment check:** ask the client to read `index.html` and verify that it references `./assets/dn-monogram.png` and contains the expected portfolio title.
 
-These tasks could not be completed by plain chat from memory: they require live access to the repository state. The screenshots must show the MCP tool call and its result, not only the assistant's prose response. I will then attach the three screenshots with this explainer.
+These tasks could not be completed by plain chat from memory: they require live access to the repository files. The screenshots must show the MCP tool call and its result, not only the assistant's prose response. The configured filesystem server is intentionally read-only in how I use it for this assignment; Git history would require a separate GitHub MCP server or a separate approved connector.
 
 ## Human review boundary
 
