@@ -41,3 +41,48 @@ These tasks could not be completed by plain chat from memory: they require live 
 ## Human review boundary
 
 The agent may gather and organize evidence. I still decide whether the source is current, whether a number is safe to publish, whether a claim exceeds the evaluation design, and whether any file contains sensitive information. The useful progression is not “chat, then magic agent.” It is fixed workflow first, controlled tools second, selective autonomy last.
+
+MCP CHECKS : 
+
+2026-08-08 01:00:42.107 [info] Starting server io.github.github/github-mcp-server
+2026-08-08 01:00:42.108 [info] Connection state: Starting
+2026-08-08 01:00:42.112 [info] Starting server from LocalProcess extension host
+2026-08-08 01:00:42.128 [info] Connection state: Running
+2026-08-08 01:00:45.167 [info] Discovered resource metadata at https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/
+2026-08-08 01:00:45.168 [info] Using auth server metadata url: https://github.com/login/oauth
+2026-08-08 01:00:45.977 [info] Discovered authorization server metadata at https://github.com/.well-known/oauth-authorization-server/login/oauth
+2026-08-08 01:00:47.133 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:00:52.133 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:00:57.132 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:01:02.132 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:01:07.136 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:01:12.142 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:01:17.137 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:01:22.140 [info] Waiting for server to respond to `initialize` request...
+2026-08-08 01:01:27.561 [info] Discovered 44 tools
+2026-08-08 01:02:19.678 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:02:21.381 [info] Connection state: Stopped
+2026-08-08 01:02:58.635 [info] Starting server io.github.github/github-mcp-server
+2026-08-08 01:02:58.637 [info] Connection state: Starting
+2026-08-08 01:02:58.637 [info] Starting server from LocalProcess extension host
+2026-08-08 01:02:58.638 [info] Connection state: Running
+2026-08-08 01:03:01.739 [info] Discovered resource metadata at https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/
+2026-08-08 01:03:01.740 [info] Using auth server metadata url: https://github.com/login/oauth
+2026-08-08 01:03:02.576 [info] Discovered authorization server metadata at https://github.com/.well-known/oauth-authorization-server/login/oauth
+2026-08-08 01:03:06.059 [info] Discovered 44 tools
+2026-08-08 01:03:39.833 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:03:40.385 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:03:40.917 [info] Connection state: Stopped
+2026-08-08 01:04:41.169 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:05:01.872 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:06:16.869 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:08:35.753 [info] Starting server io.github.github/github-mcp-server
+2026-08-08 01:08:35.754 [info] Connection state: Starting
+2026-08-08 01:08:35.764 [info] Starting server from LocalProcess extension host
+2026-08-08 01:08:35.765 [info] Connection state: Running
+2026-08-08 01:08:39.056 [info] Discovered resource metadata at https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/
+2026-08-08 01:08:39.057 [info] Using auth server metadata url: https://github.com/login/oauth
+2026-08-08 01:08:39.574 [info] Discovered authorization server metadata at https://github.com/.well-known/oauth-authorization-server/login/oauth
+2026-08-08 01:08:39.891 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:08:40.472 [info] Stopping server io.github.github/github-mcp-server
+2026-08-08 01:08:40.496 [info] Connection state: Stopped
