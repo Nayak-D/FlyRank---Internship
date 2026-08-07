@@ -41,15 +41,9 @@
             width: 56px;
             height: 56px;
             margin-bottom: 48px;
+            display: block;
             border-radius: 8px;
-            display: grid;
-            place-items: center;
-            background: var(--teal);
-            color: var(--paper);
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 0;
+            object-fit: cover;
         }
 
         p {
@@ -93,7 +87,7 @@
 
 <body>
     <main>
-        <div class="mark" role="img" aria-label="DN monogram">DN</div>
+        <img class="mark" src="./assets/dn-monogram.png" alt="DN monogram">
         <h1>DN Search Intelligence</h1>
         <p>I turn messy search data into ranked, reviewable actions so teams can refresh the right content first.</p>
         <div class="status">Portfolio in progress</div>
