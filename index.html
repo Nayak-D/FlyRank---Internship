@@ -4,96 +4,101 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="DN Search Intelligence portfolio coming soon.">
+    <meta name="description" content="DN Search Intelligence portfolio: search data ranking and refresh review work.">
     <meta name="theme-color" content="#176B87">
     <link rel="icon" href="./assets/dn-monogram.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
     <title>DN Search Intelligence</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Space+Grotesk:wght@500;600&display=swap');
-
-        :root {
-            --teal: #176B87;
-            --ink: #17212B;
-            --paper: #F7F8F5;
-            --amber: #D99A2B;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            background: var(--paper);
-            color: var(--ink);
-            font-family: 'Source Sans 3', sans-serif;
-        }
-
-        main {
-            width: min(680px, calc(100% - 48px));
-            padding: 48px 0;
-        }
-
-        .mark {
-            width: 56px;
-            height: 56px;
-            margin-bottom: 48px;
-            display: block;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        p {
-            max-width: 560px;
-            margin: 0;
-            font-size: 1.25rem;
-            line-height: 1.45;
-        }
-
-        h1 {
-            margin: 0 0 20px;
-            color: var(--teal);
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
-            font-weight: 600;
-            line-height: 0.98;
-            letter-spacing: 0;
-        }
-
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 48px;
-            color: var(--ink);
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .status::before {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: var(--amber);
-            content: '';
-        }
-    </style>
 </head>
 
 <body>
-    <main>
-        <img class="mark" src="./assets/dn-monogram.png"
-            onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/Nayak-D/FlyRank---Internship/main/assets/dn-monogram.png';"
-            alt="DN monogram">
-        <h1>DN Search Intelligence</h1>
-        <p>I turn messy search data into ranked, reviewable actions so teams can refresh the right content first.</p>
-        <div class="status">Portfolio in progress</div>
-    </main>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html"><img src="./assets/dn-monogram.png" alt="DN mark"><span>DN Search
+                    Intelligence</span></a>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="case-study.html">Case</a>
+                <a href="method.html">Method</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main class="hero">
+            <p class="eyebrow">Portfolio</p>
+            <h1>Ranked refresh queue for search-driven content review</h1>
+            <p>I turn messy search and engagement signals into a reviewable queue of content refresh opportunities. This
+                site shows the model, the validation, and the evidence from the actual work files.</p>
+            <div class="button-row">
+                <a class="button button-primary" href="case-study.html">Inspect the case</a>
+                <a class="button button-secondary" href="method.html">See the method</a>
+            </div>
+        </main>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Featured work</h2>
+            <p>The featured case study is a Content Refresh Opportunity Model. It ranks 30,000 page snapshots, validates
+                on a client-holdout split, and improves Precision@50 from 0.240 to 0.740 versus the baseline rule.</p>
+            <div class="metrics-grid">
+                <article>
+                    <span class="metric">30,000</span>
+                    <p>page snapshots scored</p>
+                </article>
+                <article>
+                    <span class="metric">0.740</span>
+                    <p>model Precision@50</p>
+                </article>
+                <article>
+                    <span class="metric">3,605</span>
+                    <p>high-confidence refresh items</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-grid" style="margin-top: 32px;">
+            <div>
+                <h2>Why this matters</h2>
+                <p>Content teams need a practical way to prioritize pages for refresh. This model is built to surface
+                    likely opportunities while keeping a human review layer in place.</p>
+            </div>
+            <div>
+                <img src="assets/portfolio-process.svg" alt="Frame, score, validate, act">
+            </div>
+        </section>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Navigation</h2>
+            <div class="card-grid">
+                <article>
+                    <h3>Case</h3>
+                    <p>Read the full Content Refresh Opportunity Model case study and evidence.</p>
+                </article>
+                <article>
+                    <h3>Method</h3>
+                    <p>See how the model was framed, audited, validated, and made reviewable.</p>
+                </article>
+                <article>
+                    <h3>About</h3>
+                    <p>Learn the portfolio approach, the build stack, and the known rough parts.</p>
+                </article>
+                <article>
+                    <h3>Contact</h3>
+                    <p>Find the working email and public repo links to start a conversation.</p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>This site is built with static HTML and CSS, with each page reachable from the top navigation.</p>
+            <div class="footer-links">
+                <a href="case-study.html">Case</a>
+                <a href="method.html">Method</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

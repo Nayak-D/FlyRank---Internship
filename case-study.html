@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Content Refresh Opportunity Model case study for DN Search Intelligence.">
+    <meta name="theme-color" content="#176B87">
+    <link rel="icon" href="./assets/dn-monogram.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Case Study | DN Search Intelligence</title>
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html"><img src="./assets/dn-monogram.png" alt="DN mark"><span>DN Search
+                    Intelligence</span></a>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="case-study.html">Case</a>
+                <a href="method.html">Method</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main class="hero">
+            <p class="eyebrow">Featured case study</p>
+            <h1>Content Refresh Opportunity Model</h1>
+            <p>This model ranks existing pages by urgency for refresh review. It uses search and engagement signals to
+                surface pages that are declining in performance but still have enough demand to justify editorial
+                attention.</p>
+            <div class="button-row">
+                <a class="button button-primary" href="method.html">See the method</a>
+                <a class="button button-secondary"
+                    href="https://github.com/Nayak-D/FlyRank---Internship/blob/main/outputs/model_report.md"
+                    target="_blank">Open model report</a>
+            </div>
+        </main>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Model evidence</h2>
+            <p>The final recommendation queue was built from 30,000 scored rows. A client-holdout validation split shows
+                the selected random forest model improved Precision@50 from 0.240 to 0.740 versus the baseline rule.</p>
+            <div class="metrics-grid">
+                <article>
+                    <span class="metric">30,000</span>
+                    <p>page snapshots scored</p>
+                </article>
+                <article>
+                    <span class="metric">0.240 → 0.740</span>
+                    <p>Precision@50 baseline vs selected model</p>
+                </article>
+                <article>
+                    <span class="metric">3,605</span>
+                    <p>high-confidence refresh recommendations</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-grid" style="margin-top: 32px;">
+            <div>
+                <h2>What the queue shows</h2>
+                <p>The top-ranked items are not just low-performing pages. They combine declining demand signals with
+                    evidence that the page still receives impressions, clicks, or sessions. That makes the
+                    recommendations usable for manual review, not automated publishing.</p>
+                <p>The queue is intentionally layered by confidence: high, medium, and low. That gives a practical human
+                    review workflow before any refresh action is taken.</p>
+            </div>
+            <div>
+                <img src="outputs/charts/action_mix.svg" alt="Action mix chart">
+                <p style="margin-top: 12px;">Action mix across the scored queue.</p>
+            </div>
+        </section>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Top queue preview</h2>
+            <p>The top 10 ranked pages include multiple refresh-and-review candidates where the model found declining
+                traffic plus enough visible demand to justify human verification.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Action</th>
+                        <th>Score</th>
+                        <th>Impressions</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>refresh_and_review_ctr</td>
+                        <td>81.6</td>
+                        <td>12,834</td>
+                        <td>down</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>refresh_and_review_ctr</td>
+                        <td>81.4</td>
+                        <td>8,064</td>
+                        <td>down</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>refresh_and_review_ctr</td>
+                        <td>81.4</td>
+                        <td>2,498</td>
+                        <td>down</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>refresh_and_review_ctr</td>
+                        <td>81.0</td>
+                        <td>13,790</td>
+                        <td>down</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>refresh_and_review_ctr</td>
+                        <td>80.9</td>
+                        <td>3,393</td>
+                        <td>down</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>refresh_and_review_ctr</td>
+                        <td>80.8</td>
+                        <td>5,811</td>
+                        <td>down</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section-grid" style="margin-top: 32px;">
+            <div>
+                <h2>Why the model works</h2>
+                <p>The strongest signals are not just page count or traffic. They include duration with impressions,
+                    average position, content age, and CTR behavior. That helps the model identify pages that are
+                    declining but still important enough to refresh.</p>
+                <ul style="padding-left: 20px;">
+                    <li>Impressions and sessions show demand exists.</li>
+                    <li>Average position and CTR capture search performance weakness.</li>
+                    <li>Page age and content length help avoid chasing too-fresh or too-short content.</li>
+                </ul>
+            </div>
+            <div><img src="outputs/charts/top_feature_importance.svg" alt="Top feature importance chart"></div>
+        </section>
+
+        <section class="section-grid" style="margin-top: 32px;">
+            <div>
+                <h2>Validation and model trust</h2>
+                <p>The model was selected with a client-holdout split, meaning the validation set keeps the same clients
+                    out of training. That is the safest way to avoid recommending pages that only look good because the
+                    model memorized one client’s behavior.</p>
+                <p>Manual review remains part of the workflow: the queue points reviewers to likely refresh
+                    opportunities, but editorial judgment still decides what gets updated.</p>
+            </div>
+            <div><img src="outputs/charts/confidence_mix.svg" alt="Confidence mix chart"></div>
+        </section>
+
+        <footer class="footer">
+            <p>Evidence from the model report and the ranked queue is the core of this case study.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="method.html">Method</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

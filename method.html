@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Method page for search-data ranking and model validation.">
+    <meta name="theme-color" content="#176B87">
+    <link rel="icon" href="./assets/dn-monogram.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Method | DN Search Intelligence</title>
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html"><img src="./assets/dn-monogram.png" alt="DN mark"><span>DN Search
+                    Intelligence</span></a>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="case-study.html">Case</a>
+                <a href="method.html">Method</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main class="hero">
+            <p class="eyebrow">Method and evidence</p>
+            <h1>How the refresh ranking was built and validated</h1>
+            <p>This page describes the research question, the data boundary, the ranking task, the validation strategy,
+                and how the result is meant to support human review instead of replacing it.</p>
+        </main>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Research question</h2>
+            <p>Which existing pages should a content team review first for a refresh, based on declining search
+                performance and continuing demand?</p>
+            <p>The work is framed as a ranking task: the output is a queue of pages ordered by the likelihood that they
+                deserve a refresh action.</p>
+        </section>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Data contract and validation</h2>
+            <p>The model uses 30,000 anonymized page snapshots from the provided dataset. It excludes titles, URLs, and
+                client identifiers from the prediction target so it does not learn site-specific labels directly.</p>
+            <p>Validation uses a <strong>client-holdout split</strong>, which keeps entire clients out of training so
+                the model’s score is tested on truly unseen pages. That helps reduce the risk of overfitting to one
+                client’s traffic patterns.</p>
+        </section>
+
+        <section class="section-grid" style="margin-top: 32px;">
+            <div>
+                <h2>Signal audit</h2>
+                <p>The strongest features include:</p>
+                <ul style="padding-left: 20px;">
+                    <li><strong>days_with_impressions</strong>: shows ongoing visibility.</li>
+                    <li><strong>log_impressions_90d</strong>: captures exposure over the last 3 months.</li>
+                    <li><strong>avg_position</strong>: identifies pages slipping in search rank.</li>
+                    <li><strong>content_age_days</strong>: avoids chasing pages that were just published.</li>
+                </ul>
+            </div>
+            <div><img src="outputs/charts/trend_distribution.svg" alt="Trend distribution chart"></div>
+        </section>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Baseline vs model</h2>
+            <p>The baseline rule is a simple score that captures decline and traffic signals. The selected random forest
+                model outperforms that baseline on the chosen ranking metric.</p>
+            <ul style="padding-left: 20px;">
+                <li>Baseline precision at top 50: <strong>0.240</strong></li>
+                <li>Selected random forest precision at top 50: <strong>0.740</strong></li>
+            </ul>
+            <p>That means the model should place more actual declining pages higher in the queue than the baseline rule.
+            </p>
+        </section>
+
+        <section class="section-grid" style="margin-top: 32px;">
+            <div>
+                <h2>Action workflow</h2>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Frame</strong> the recommendation as a review queue, not an automated publish list.</li>
+                    <li><strong>Score</strong> pages with the model and label them by confidence.</li>
+                    <li><strong>Validate</strong> using client-holdout and manual spot checks.</li>
+                    <li><strong>Act</strong> by sending high-confidence candidates to editorial review.</li>
+                </ul>
+            </div>
+            <div><img src="assets/portfolio-process.svg" alt="Process diagram"></div>
+        </section>
+
+        <section class="section-card" style="margin-top: 32px;">
+            <h2>Reproducibility links</h2>
+            <p>The evidence files in this repository include the model report, the notebook skeletons, and the chart
+                exports used on this site.</p>
+            <div class="card-grid" style="margin-top: 20px;">
+                <article>
+                    <h3>Model report</h3>
+                    <p><a href="https://github.com/Nayak-D/FlyRank---Internship/blob/main/outputs/model_report.md"
+                            target="_blank">outputs/model_report.md</a></p>
+                </article>
+                <article>
+                    <h3>Notebook skeletons</h3>
+                    <p><a href="https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/notebooks/capstone.ipynb"
+                            target="_blank">work/notebooks/capstone.ipynb</a></p>
+                </article>
+                <article>
+                    <h3>Chart files</h3>
+                    <p>outputs/charts/top_feature_importance.svg</p>
+                </article>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>All sections are connected by a single portfolio narrative: search-derived signals, ranked review
+                priorities, and human validation.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="case-study.html">Case</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
