@@ -41,7 +41,7 @@ Every page points toward the same action: open the case study, inspect the evide
 7. Human review workflow and limitations
 8. Reproducibility links
 
-**CTA:** Open the refresh queue and inspect the top recommendations.
+**CTA:** Review the ranked refresh queue and inspect the top recommendations.
 
 **Still need to gather:** cropped queue screenshot; chart exports at portfolio resolution; public repository URL; notebook or demo URL; final model version and rerun date; one reviewer/editor quote if available.
 
@@ -57,7 +57,7 @@ Every page points toward the same action: open the case study, inspect the evide
 6. Validation audit
 7. Action playbook
 
-**CTA:** See how the ranking was validated.
+**CTA:** Review the ranked refresh queue; supporting link: see how the ranking was validated.
 
 **Still need to gather:** final notebook links; one readable chart per stage; a short explanation of the client-holdout split; a screenshot of the notebook output.
 
@@ -69,7 +69,7 @@ Every page points toward the same action: open the case study, inspect the evide
 4. Short working history / education block
 5. Contact details
 
-**CTA:** Start a conversation about a search or content decision.
+**CTA:** Review the ranked refresh queue; supporting link: start a conversation about a search or content decision.
 
 **Still need to gather:** approved headshot; final bio; contact destination; links to GitHub and LinkedIn; confirmed name in the wordmark.
 
@@ -79,7 +79,7 @@ Every page points toward the same action: open the case study, inspect the evide
 2. Email / LinkedIn / GitHub
 3. Optional availability note
 
-**CTA:** Send an inquiry.
+**CTA:** Review the ranked refresh queue; supporting link: send an inquiry.
 
 **Still need to gather:** preferred email, public profile links, and the final thank-you/confirmation state.
 
