@@ -105,6 +105,27 @@ Use the matching packet in the internship portal. Put public URLs under **Delive
 
 > I built a source-grounded evidence-card workflow with four steps: gather and extract, synthesize evidence, draft the card, and review/format. It documents exact prompts, handoffs, five real repository runs, setup cost, time saved, failure points, and required human checks. The workflow is agent-agnostic and can run in Claude, ChatGPT, NotebookLM, or Copilot Chat. A human must verify every number, privacy boundary, and claim before publication.
 
+## FL-05 - Agent Concepts and MCP Basics
+
+### Deliverable links
+
+- GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
+- Direct explainer link: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/fl05_agent_mcp_explainer.md`
+- MCP configuration link, if useful: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/.vscode/mcp.json`
+
+### Files to upload
+
+- `work/fl05_agent_mcp_explainer.md`
+- Screenshot 1: GitHub MCP repository discovery and confirmation of `work/fl04_automation_workflow_v2.md`
+- Screenshot 2: GitHub MCP reading the five `Five real runs` headings
+- Screenshot 3: GitHub MCP reading `index.html` and confirming the logo path and page title
+- Optional: screenshot of the MCP server log showing `Connection state: Running` and `Discovered 44 tools`
+- Optional: `.vscode/mcp.json` if the portal accepts configuration files
+
+### Notes
+
+> The explainer distinguishes my FL-04 pipeline as a fixed workflow rather than an agent, explains MCP tools, resources, and prompts, and names a source-discovery/evidence-card agent as the concrete upgrade. I connected the GitHub MCP server and ran three read-only tasks that required live repository access: repository discovery, source retrieval, and homepage deployment verification. The screenshots show the MCP tool calls and returned results, not plain chat. The server log also records a successful running state and discovery of 44 tools. A human still verifies evidence, privacy, and claims before publication.
+
 ## Before clicking Save submission
 
 - Replace every live-URL placeholder with the real public URL.
