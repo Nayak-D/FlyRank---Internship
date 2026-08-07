@@ -122,22 +122,37 @@ Use [dn-monogram.png](../assets/dn-monogram.png) as the favicon and compact mark
 
 ## Final image set
 
-Use real captures for proof and one consistent visual treatment for connective tissue.
+The set is deliberately small. Real work evidence carries the case study; one simple brand-colored diagram carries the connective tissue; no generated image is used as proof.
 
-| Image | Source / treatment | Purpose | Status |
+### Keepers
+
+| Image | Source / treatment | Purpose | Decision |
 |---|---|---|---|
-| Ranked queue preview | Real crop from `outputs/refresh_queue_sample.csv` or its rendered table | Hero proof for the featured case | Need final capture |
-| Action mix chart | Existing `outputs/charts/action_mix.svg` | Show how recommendations distribute across actions | Available |
-| Confidence mix chart | Existing `outputs/charts/confidence_mix.svg` | Explain review priority and uncertainty | Available |
-| Top feature importance | Existing `outputs/charts/top_feature_importance.svg` | Make the model interpretable | Available |
-| Validation comparison | New real capture from the model report/notebook | Establish baseline vs model honestly | Need final crop |
-| Process diagram | Simple brand-colored diagram, no generated scene | Connect the method sections | Need to create |
-| Portrait | Real photo, neutral crop | Human context on About page | Need to gather |
-| Monogram | [nd-monogram.svg](../assets/nd-monogram.svg) | Favicon, navigation, social preview fallback | Ready |
+| Ranked queue preview | Real crop from `outputs/refresh_queue_sample.csv` or its rendered table | Hero proof for the featured case | Use a clean, legible capture; do not replace with AI art |
+| Action mix chart | Existing `outputs/charts/action_mix.svg` | Show how recommendations distribute across actions | Keep as real model output |
+| Confidence mix chart | Existing `outputs/charts/confidence_mix.svg` | Explain review priority and uncertainty | Keep as real model output |
+| Top feature importance | Existing `outputs/charts/top_feature_importance.svg` | Make the model interpretable | Keep as real model output |
+| Trend distribution chart | Existing `outputs/charts/trend_distribution.svg` | Give the case study a compact view of the underlying signal | Keep only if it remains readable at portfolio width |
+| Validation comparison | Real crop from `outputs/model_report.md` or the executed notebook | Establish baseline vs model honestly | Capture the measured `0.240 -> 0.740` Precision@50 comparison |
+| Process diagram | [portfolio-process.svg](../assets/portfolio-process.svg) | Connect frame -> score -> validate -> act | Use the restrained identity-kit treatment |
+| Portrait | Real photo, neutral crop | Human context on About page | Gather and use a real photo; never generate this |
+| Monogram | [dn-monogram.png](../assets/dn-monogram.png) | Favicon, navigation, social preview fallback | Keep as the compact mark |
+
+### Real-capture decisions
+
+- The ranked queue, charts, validation comparison, notebook outputs, and any case-study screenshots must be real captures because they are evidence of actual work.
+- The portrait must be a real photograph because it represents the person, not an abstract concept.
+- The process diagram is the only newly created connective image. It uses the existing teal, near-black, near-white, and amber palette and contains no fabricated metrics or interface.
+
+### Still need to gather
+
+- A final cropped queue screenshot with readable action labels.
+- A final validation screenshot at portfolio resolution.
+- An approved real portrait.
 
 ### Rejection note
 
-I rejected a generated abstract "AI analytics dashboard" hero because it would imply a product interface and fabricate proof that does not exist in the case study. The portfolio should lead with the real ranked queue and measured comparison; connective graphics can explain the method, but they should not impersonate evidence.
+I rejected a generated abstract "AI analytics dashboard" hero because it would imply a product interface and fabricate proof that does not exist in the case study. It also competed with the actual queue instead of helping a reviewer understand it. The portfolio should lead with the real ranked queue and measured comparison; the single process diagram explains the method without impersonating evidence.
 
 ## Submission checklist
 
@@ -149,7 +164,9 @@ I rejected a generated abstract "AI analytics dashboard" hero because it would i
 - [x] Four-color palette with hex codes
 - [x] Simple logo/favicon asset
 - [x] Two-line style note for the AI workspace
-- [x] Real-capture image plan and rejection note
+- [x] Final keeper set mapped to the content map
+- [x] Real-capture decisions and rejection note
+- [x] One consistent connective graphic
 - [ ] Add final public URLs to the internship portal
 - [ ] Attach screenshots and photos under Files
 - [ ] Paste the style note into the Claude Project
