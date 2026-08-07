@@ -25,7 +25,7 @@ flowchart LR
 
 ## Tool and configuration
 
-**No-code tool:** Claude Project with the source files uploaded as project knowledge and the instructions below saved as the project instruction.
+**No-code tool:** any agent that supports persistent instructions or a reusable prompt. The same workflow can run in Claude Project, ChatGPT Project/custom GPT, NotebookLM, or Copilot Chat. The source files and prompt contract stay the same; only the place where the instructions are saved changes.
 
 **Project knowledge loaded:**
 
@@ -38,6 +38,17 @@ flowchart LR
 **Input contract:** paste one new markdown, notebook export, report section, chart description, or repository note at a time. Include its filename and intended audience if known.
 
 **Output contract:** return the four labelled sections below. Use `Not available in source` instead of guessing.
+
+## Agent options
+
+| Agent/tool | Best use in this workflow | Configuration | Trade-off |
+|---|---|---|---|
+| **Claude Project** | Persistent project knowledge plus long source-grounded writing | Upload the five source files and save the Project instruction below | Strong for long documents; requires a Claude account and manual file upload |
+| **ChatGPT Project or custom GPT** | Repeatable evidence-card drafting and review | Add the same files as project knowledge or GPT knowledge; paste the same instruction | Convenient for drafting; custom GPT creation may require a paid plan |
+| **NotebookLM** | Source-grounded extraction and synthesis from notebooks and reports | Upload the source files, then use the Step 1 and Step 2 prompts | Strong citation behavior; less convenient for final portfolio formatting |
+| **Copilot Chat** | Working directly beside the repository files in VS Code | Open the repo, attach the source file, and paste the project instruction before each run | No separate upload needed; persistent project memory depends on the workspace setup |
+
+**Chosen implementation for this repo:** Copilot Chat or Claude Project, whichever is available to the intern. The acceptance criteria do not depend on the vendor: a new source must pass through all four steps and produce either a source-backed card or `HOLD FOR HUMAN REVIEW`.
 
 ### Project instruction
 
@@ -134,7 +145,7 @@ Check:
 Then provide a clean final card only if all high-risk issues are resolved. Otherwise return "HOLD FOR HUMAN REVIEW" followed by the blocking issues.
 ```
 
-**Human gate:** I compare each number and claim with the source, remove anything sensitive, decide whether the evidence is strong enough for public use, and only then copy the clean card into a portfolio or submission.
+**Human gate:** I compare each number and claim with the source, remove anything sensitive, decide whether the evidence is strong enough for public use, and only then copy the clean card into a portfolio or submission. The human gate is required regardless of which agent runs the prompts.
 
 ## Five real runs
 
@@ -231,6 +242,7 @@ A brand-new input should use the same path: paste the source filename and text i
 - [x] Timing includes setup cost and human verification
 - [x] Failure points and required human checks named
 - [x] New-input behavior defined
-- [ ] Load the instruction and source files into the Claude Project
+- [ ] Load the instruction and source files into one chosen AI workspace or agent
+- [ ] Confirm the same prompts work in a second available agent, if practical
 - [ ] Run one brand-new input end to end and save the result
 - [ ] Post this walkthrough and the saved run output to the track thread
