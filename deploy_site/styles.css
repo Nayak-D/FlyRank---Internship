@@ -77,6 +77,9 @@ button:hover {
 }
 
 .site-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     font-size: 0.95rem;
     color: var(--ink);
     font-weight: 600;
@@ -167,6 +170,46 @@ li:last-child {
     border-color: var(--border);
 }
 
+.contact-form {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.contact-form label {
+    display: grid;
+    gap: 6px;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid rgba(23, 107, 135, 0.25);
+    border-color: var(--teal);
+}
+
+.contact-form button {
+    justify-self: start;
+    cursor: pointer;
+}
+
 .metrics-grid,
 .content-grid,
 .card-grid {
@@ -214,6 +257,10 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 16px;
+}
+
+table a {
+    overflow-wrap: anywhere;
 }
 
 thead {
@@ -281,5 +328,29 @@ tr:nth-child(even) {
 
     .section-grid {
         grid-template-columns: 1fr;
+    }
+
+    .site-header {
+        align-items: flex-start;
+    }
+
+    .site-nav {
+        width: 100%;
+        gap: 4px 10px;
+    }
+
+    .site-nav a {
+        padding: 6px 4px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
     }
 }

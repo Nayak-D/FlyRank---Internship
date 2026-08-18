@@ -92,6 +92,49 @@ Use the matching packet in the internship portal. Put public URLs under **Delive
 
 ## FL-04 - Ship an Automation Workflow v2
 
+## Week 7 - Open It on Your Phone
+
+### Deliverable links
+
+- Updated live portfolio: **add the deployed Netlify or Vercel URL; the current GitHub Pages URL serves the capstone paper, not the portfolio homepage**
+- GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
+- Direct fix-log link: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/week07_mobile_fix_log.md`
+
+### Files to upload
+
+- `work/week07_mobile_fix_log.md`
+- Phone screenshot of the live homepage with the URL visible
+- Phone screenshot of the contact page/navigation after the fixes
+- Reviewer feedback screenshot or text, once the design review is completed
+
+### Notes
+
+> I audited the static portfolio source and fixed concrete mobile issues: navigation links now have 44px touch targets, tables scroll horizontally below 720px instead of breaking the viewport, long links can wrap, the mobile header aligns cleanly, and contact fields use 16px text to avoid iOS zoom. Images already use responsive max-width behavior. Automated checks confirmed the mobile rules in both published stylesheet copies. The portfolio still needs its own Netlify or Vercel deployment, a physical-phone tap-through, screenshots, and reviewer checkpoint before this can be marked fully complete.
+
+## Week 8 - Wire One Real Thing
+
+### Deliverable links
+
+- GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
+- Direct explainer link: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/week08_wire_one_real_thing.md`
+- Live Netlify portfolio URL: **add the deployed `https://...netlify.app` URL after deployment**
+
+### Files to upload
+
+- `work/week08_wire_one_real_thing.md`
+- Screenshot of the completed contact form
+- Screenshot of the received Netlify submission or notification email
+
+### Notes
+
+> I chose exactly one dynamic feature: a contact form. The form uses Netlify Forms on the free tier, so a visitor's name, email, and message are sent from the browser to Netlify, stored in the site's Forms area, and forwarded through the configured notification email. The form includes required fields and a honeypot for simple spam protection. The markup is wired and validated locally; the final pass requires deploying on Netlify with form detection enabled, sending a real test submission, and attaching proof that it arrived.
+
+### Current status
+
+The feature is implemented in `contact.html` and `deploy_site/contact.html`, but it should not be submitted as fully complete until the Netlify URL and real submission evidence are added.
+
+## FL-04 - Ship an Automation Workflow v2
+
 ### Deliverable links
 
 - GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
