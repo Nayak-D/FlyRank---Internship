@@ -111,6 +111,25 @@ Use the matching packet in the internship portal. Put public URLs under **Delive
 
 > I audited the static portfolio source and fixed concrete mobile issues: navigation links now have 44px touch targets, tables scroll horizontally below 720px instead of breaking the viewport, long links can wrap, the mobile header aligns cleanly, and contact fields use 16px text to avoid iOS zoom. Images already use responsive max-width behavior. Automated checks confirmed the mobile rules in both published stylesheet copies. The portfolio still needs its own Netlify or Vercel deployment, a physical-phone tap-through, screenshots, and reviewer checkpoint before this can be marked fully complete.
 
+## Week 7 - Survive the Crit
+
+### Deliverable links
+
+- GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
+- Crit record and proof statement: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/week07_survive_the_crit.md`
+- Public capstone proof page: `https://nayak-d.github.io/FlyRank---Internship/`
+- Live root portfolio: **add the Netlify or Vercel URL after deployment**
+
+### Files to upload
+
+- `work/week07_survive_the_crit.md`
+- Reviewer feedback screenshot or exported message
+- Before/after screenshot showing each must-fix addressed
+
+### Notes
+
+> I submitted the proof statement “I turn messy search data into ranked, reviewable actions so teams can refresh the right content first” and asked the reviewer two questions first: “In ten seconds, what do I do?” and “Would you believe I am good at it?” I recorded the feedback without defending the original, sorted it into must-fix versus nice-to-have, and documented the changes made. The repository contains the review template and mobile fix evidence; the reviewer answers, root portfolio URL, and before/after screenshots must be added from a real design review before claiming this checkpoint passed.
+
 ## Week 8 - Wire One Real Thing
 
 ### Deliverable links

@@ -44,6 +44,29 @@
         </section>
 
         <section class="section-card" style="margin-top: 32px;">
+            <h2>Send a message</h2>
+            <p>This is the portfolio's one live feature. Netlify receives the form and forwards the submission to the
+                configured site inbox.</p>
+            <form class="contact-form" name="portfolio-contact" method="POST" data-netlify="true"
+                data-netlify-honeypot="bot-field" action="/contact.html?sent=true">
+                <input type="hidden" name="form-name" value="portfolio-contact">
+                <p hidden>
+                    <label>Do not fill this out: <input name="bot-field"></label>
+                </p>
+                <label for="name">Name
+                    <input id="name" name="name" type="text" autocomplete="name" required>
+                </label>
+                <label for="email">Email
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </label>
+                <label for="message">Message
+                    <textarea id="message" name="message" required></textarea>
+                </label>
+                <button class="button button-primary" type="submit">Send message</button>
+            </form>
+        </section>
+
+        <section class="section-card" style="margin-top: 32px;">
             <h2>Why this site exists</h2>
             <p>This portfolio is a live, rough version of the work. It is enough for a reviewer to open the real case
                 study, inspect the evidence, and understand the method without waiting for polish.</p>
