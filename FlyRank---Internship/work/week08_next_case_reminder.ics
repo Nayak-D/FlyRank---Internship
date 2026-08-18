@@ -1,0 +1,14 @@
+﻿BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FlyRank Internship//Week 8 Reminder//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:week08-next-case-20260818T230030@flyrank-internship
+DTSTAMP:20260818T173030Z
+DTSTART:20260821T190000
+DTEND:20260821T193000
+SUMMARY:Add next portfolio case study (3D Portfolio Launch)
+DESCRIPTION:Update personal_site/case-study.html using the three beats: problem, what I did, what came of it. Add proof link and deploy.
+RRULE:FREQ=WEEKLY;BYDAY=FR;COUNT=12
+END:VEVENT
+END:VCALENDAR
