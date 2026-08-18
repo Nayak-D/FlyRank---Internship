@@ -8,6 +8,7 @@ Use the matching packet in the internship portal. Put public URLs under **Delive
 
 - GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
 - Optional direct file link: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/portfolio_identity_content_map.md`
+- Optional proof page: `https://nayak-d.github.io/FlyRank---Internship/`
 
 ### Files to upload
 
@@ -24,6 +25,7 @@ Use the matching packet in the internship portal. Put public URLs under **Delive
 
 - GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
 - Optional direct file link: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/portfolio_identity_content_map.md`
+- Optional proof page: `https://nayak-d.github.io/FlyRank---Internship/`
 
 ### Files to upload
 
@@ -43,6 +45,7 @@ Use the matching packet in the internship portal. Put public URLs under **Delive
 
 - GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
 - Direct content-map link: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/portfolio_identity_content_map.md`
+- Optional proof page: `https://nayak-d.github.io/FlyRank---Internship/`
 
 ### Files to upload
 

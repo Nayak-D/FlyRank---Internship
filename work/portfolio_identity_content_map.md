@@ -105,7 +105,7 @@ The palette is intentionally restrained: teal gives the work a technical signal,
 
 ### Logo / favicon
 
-Use [dn-monogram.png](../assets/dn-monogram.png) as the favicon and compact mark. The `ND` monogram is a temporary handle-based mark; replace the letters with the confirmed initials before publishing.
+Use [dn-monogram.png](../assets/dn-monogram.png) as the current favicon and compact portfolio mark. It is already used by the published paper and portfolio surfaces; replace it only if the final personal wordmark changes.
 
 ### Two-line style note
 
