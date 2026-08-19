@@ -1,11 +1,11 @@
-# FlyRank ML Internship — Starter Repo
+# FlyRank ML Internship — Refresh Opportunity Scoring
 
 **Applied Search Intelligence: Google Search Ranking & Discoverability**
 
-This is the starting point for the FlyRank ML Internship. You **clone it into your own public
-repo** (one click — *Use this template*), build everything there, and submit that repo URL on
-each assignment in your portal — it's your workspace, your submission, and your portfolio all
-at once. The rhythm is simple: do the work, commit it, submit on the card. Done.
+This repository contains a completed, public-safe capstone for content strategists who need to
+decide which pages to review first when a portfolio is larger than one review cycle. It compares
+a transparent refresh-opportunity rule with a class-balanced Random Forest and publishes the
+result as a ranked review queue, research paper, portfolio case study, and reproducible notebook.
 
 Everything here runs on a small **anonymized** slice of real FlyRank search data. No credentials,
 no private client data, no setup headaches.
@@ -13,6 +13,102 @@ no private client data, no setup headaches.
 > **New here?** Two reads: **[SETUP.md](SETUP.md)** (GitHub, Colab, and data access — ten
 > minutes, with every silent pitfall flagged), then **[GUIDE.md](GUIDE.md)** (every file
 > explained, what to edit vs. leave alone, and where your own work goes — five minutes).
+
+---
+
+## Final project documentation
+
+### What it does and for whom
+
+The project supports FlyRank-style content review. Given page-level visibility, engagement,
+freshness, and content-shape signals, it ranks pages for a strategist to inspect, refresh,
+expand, monitor, or leave alone. It is decision support for a human review queue, not autonomous
+publishing and not a prediction of Google's ranking algorithm.
+
+### Setup from a fresh clone
+
+Requirements: Python 3.11 or newer and Git.
+
+```bash
+git clone https://github.com/Nayak-D/FlyRank---Internship.git
+cd FlyRank---Internship
+python -m venv .venv
+# Windows PowerShell:
+.venv\Scripts\Activate.ps1
+# macOS/Linux:
+# source .venv/bin/activate
+python -m pip install -r requirements.txt
+python scripts/run_all.py
+```
+
+The pipeline uses the bundled anonymized sample and writes reports, charts, and a ranked queue
+under `outputs/`. For the narrative version, open
+[`work/notebooks/capstone.ipynb`](work/notebooks/capstone.ipynb) in Jupyter or Colab and run its
+code cells in order.
+
+### Usage examples
+
+```bash
+# Re-run the reference pipeline
+python scripts/run_all.py
+
+# Run the capstone notebook locally when Jupyter is installed
+jupyter notebook work/notebooks/capstone.ipynb
+```
+
+The main outputs are [`outputs/model_report.md`](outputs/model_report.md) and
+[`outputs/refresh_queue_sample.csv`](outputs/refresh_queue_sample.csv). The public paper is
+available at https://nayak-d.github.io/FlyRank---Internship/.
+
+### Architecture
+
+```text
+anonymized CSV
+   |
+   v
+feature preparation -> transparent baseline score
+   |                         |
+   +--> grouped model ------+
+           |
+           v
+       same holdout evaluation
+           |
+           v
+    ranked review queue + reason codes
+           |
+           v
+       human editorial decision
+```
+
+### Evaluation and v2 result
+
+Both systems use the same client-grouped holdout. The Random Forest reached ROC AUC 0.750 and
+Precision@50 0.740; the baseline reached ROC AUC 0.627 and Precision@50 0.240. The observed
+Precision@50 lift is 3.08x on this dataset and split. The 30,000-row release has a declining-label
+rate of 0.542. These are measured, directional results for review prioritization.
+
+### Limitations
+
+- The target is a current-window proxy, not a genuine future outcome.
+- The observed lift is not a causal estimate of what refreshing a page will do.
+- The model does not predict or reverse-engineer Google's ranking algorithm.
+- Thin-signal, low-traffic pages remain uncertain and need a separate review path.
+- Human review is required before editing or publishing.
+- The next version should use past-window features and a genuine next-window outcome.
+
+### AI transparency
+
+I used AI as a coding and writing partner for notebook structure, documentation drafts,
+validation commands, and wording reviews. I checked the repository outputs, runnable cells,
+public pages, metrics, and limitations myself; the final claims are limited to what those checks
+support.
+
+### Final showcase materials
+
+- [Demo recording script](work/demo_script.md) — record the live 3–5 minute run and add its URL inside the file.
+- [Retrospective](work/retrospective.md)
+- [Build-in-public post](work/showcase_post.md)
+- [Submission index](work/final_package_index.md)
 
 ---
 
