@@ -12,6 +12,8 @@ This index collects the FL-09 documentation/demo materials and the FL-10 capston
 - Demo script: https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/demo_script.md
 - Retrospective: https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/retrospective.md
 - Build-in-public post: https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/showcase_post.md
+- Keep-building plan: https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/keep_building_plan.md
+- Reminder evidence: https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/keep_building_reminder.ics
 - Model report: https://github.com/Nayak-D/FlyRank---Internship/blob/main/outputs/model_report.md
 - Ranked queue sample: https://github.com/Nayak-D/FlyRank---Internship/blob/main/outputs/refresh_queue_sample.csv
 

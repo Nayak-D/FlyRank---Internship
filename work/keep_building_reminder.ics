@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FlyRank Internship//Keep Building Plan//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:time-aware-refresh-impact-study-20260902T090000@nayak-d.github.io
+DTSTAMP:20260819T120000Z
+DTSTART:20260902T090000
+DURATION:PT30M
+SUMMARY:Start next case: Time-aware Refresh Impact Study
+DESCRIPTION:Open work/keep_building_plan.md. Add the next case using the three beats: problem, what I did, what came of it. Keep the existing Claude Project and verify every claim against the repository.
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Next case study starts in one week
+END:VALARM
+END:VEVENT
+END:VCALENDAR

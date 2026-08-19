@@ -109,6 +109,8 @@ support.
 - [Retrospective](work/retrospective.md)
 - [Build-in-public post](work/showcase_post.md)
 - [Submission index](work/final_package_index.md)
+- [Keep-building plan](work/keep_building_plan.md)
+- [Calendar reminder evidence](work/keep_building_reminder.ics)
 
 ---
 
