@@ -734,9 +734,11 @@
 
         <section class="section" id="abstract">
             <h2>Abstract</h2>
-            <p>With thousands of content pages and limited review capacity, which pages should a content team check
-                first? This capstone builds a ranked scoring system that combines a hand-written baseline rule with a
-                Random Forest classifier trained on observable, pre-decision signals.</p>
+            <p>FlyRank content teams need a practical way to decide which pages deserve attention when a large portfolio
+                contains more possible refreshes than a reviewer can inspect in one cycle. This capstone asks: which
+                pages should a content strategist check first? It builds a ranked scoring system that combines a
+                hand-written baseline rule with a Random Forest classifier trained on observable, pre-decision signals.
+            </p>
             <p>Evaluated on a client-holdout split, the model reached <span class="highlight">Precision@50 =
                     0.740</span>
                 versus the baseline rule's <span class="highlight">0.240</span>. That is a 3.08x improvement in placing
@@ -748,10 +750,12 @@
 
         <section class="section" id="problem">
             <h2>Introduction / Problem statement</h2>
-            <p>A website can have thousands of content pages and no reliable way to know which ones are quietly losing
-                visibility. Manual review does not scale past a handful of pages per cycle, so the real decision this
-                work supports is: <strong>given limited reviewer capacity, which pages should a content strategist check
-                    first?</strong></p>
+            <p>FlyRank's content problem is operational as much as technical: a strategist may have thousands of pages
+                to review, but only enough time to inspect a small queue each cycle. A website can therefore contain
+                pages that are quietly losing visibility without a clear, repeatable way to decide where human attention
+                should start.</p>
+            <p>The real decision this work supports is: <strong>given limited reviewer capacity, which pages should a
+                    content strategist check first?</strong></p>
             <p>The action this ranking feeds is direct: a reviewer opens the top-ranked pages and decides whether to
                 refresh, expand, or leave them. Getting the ranking wrong has a cost either way: reviewer time is wasted
                 on pages that were never declining, or a genuinely declining high-traffic page is missed.</p>

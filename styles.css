@@ -298,6 +298,27 @@ tr:nth-child(even) {
     text-align: center;
 }
 
+.graduate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #176B87, #0d4a60);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow: 0 10px 24px rgba(23, 107, 135, 0.2);
+}
+
+.badge-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #6fe7a8;
+    box-shadow: 0 0 10px rgba(111, 231, 168, 0.9);
+}
+
 .footer p {
     margin-bottom: 8px;
 }
