@@ -1,0 +1,17 @@
+{
+  "source_queue": "outputs\\refresh_queue_sample.csv",
+  "rows_loaded": 200,
+  "model_precision_at_50": 0.74,
+  "baseline_precision_at_50": 0.24,
+  "observed_lift_ratio": 3.08,
+  "evaluation_split": "client_holdout",
+  "label_boundary": "current-window declining proxy; not a future outcome",
+  "intended_use": "rank review candidates for human editorial inspection",
+  "no_go": [
+    "automatic publishing or deletion",
+    "client outreach triggered by a score",
+    "Google ranking or causal refresh claims",
+    "rows with broken or changed tracking",
+    "IDs or label-derived fields used as model features"
+  ]
+}
