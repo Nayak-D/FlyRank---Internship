@@ -152,6 +152,27 @@ Use the matching packet in the internship portal. Put public URLs under **Delive
 
 The feature is implemented in `contact.html` and `deploy_site/contact.html`, but it should not be submitted as fully complete until the Netlify URL and real submission evidence are added.
 
+## Week 9 - Break Your Own Site
+
+### Deliverable links
+
+- GitHub repository: `https://github.com/Nayak-D/FlyRank---Internship`
+- Hardening log: `https://github.com/Nayak-D/FlyRank---Internship/blob/main/work/week09_break_your_own_site.md`
+- Public capstone paper: `https://nayak-d.github.io/FlyRank---Internship/`
+- Root portfolio URL: **add the deployed Netlify or Vercel URL after deployment**
+
+### Files to upload
+
+- `work/week09_break_your_own_site.md`
+- Before/after screenshot of the contact-form edge-case fixes
+- Screenshot of the SEO/share-preview result
+- PageSpeed or Lighthouse result screenshot
+- Hardening-review feedback and evidence that must-fixes were addressed
+
+### Notes
+
+> I deliberately tested empty form submission, invalid email input, long messages, rapid double-submit behavior, the Netlify honeypot path, narrow viewport behavior, wide tables, long links, and repository/paper navigation. Fix-now changes include required browser validation, a disabled submit button after the first submit event, a visible success state after the Netlify redirect, mobile overflow/tap-target fixes, and basic title, description, canonical, Open Graph, and Twitter metadata on every portfolio page. Known limitations are named honestly: the root portfolio still needs its own Netlify/Vercel deployment, a real inbox test, physical-phone screenshots, a PageSpeed result, search-index evidence, analytics, custom domain, and hardening-review feedback.
+
 ## FL-04 - Ship an Automation Workflow v2
 
 ### Deliverable links

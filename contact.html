@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Contact DN Search Intelligence for search and refresh review work.">
     <meta name="theme-color" content="#176B87">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | DN Search Intelligence">
+    <meta property="og:description" content="Send a message about search, content, and refresh decisions.">
+    <meta property="og:image" content="assets/dn-monogram.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://nayak-d.github.io/FlyRank---Internship/contact.html">
     <link rel="icon" href="./assets/dn-monogram.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <title>Contact | DN Search Intelligence</title>
@@ -47,6 +53,7 @@
             <h2>Send a message</h2>
             <p>This is the portfolio's one live feature. Netlify receives the form and forwards the submission to the
                 configured site inbox.</p>
+            <p id="form-status" class="page-note" aria-live="polite" hidden></p>
             <form class="contact-form" name="portfolio-contact" method="POST" data-netlify="true"
                 data-netlify-honeypot="bot-field" action="/contact.html?sent=true">
                 <input type="hidden" name="form-name" value="portfolio-contact">
@@ -82,6 +89,19 @@
             </div>
         </footer>
     </div>
+    <script>
+        const contactForm = document.querySelector('.contact-form');
+        const formStatus = document.querySelector('#form-status');
+        if (new URLSearchParams(window.location.search).get('sent') === 'true') {
+            formStatus.hidden = false;
+            formStatus.textContent = 'Thanks - your message was sent. I will be in touch.';
+        }
+        contactForm?.addEventListener('submit', () => {
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+        });
+    </script>
 </body>
 
 </html>
